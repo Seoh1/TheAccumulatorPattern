@@ -147,6 +147,16 @@ def run_test_draw_circles_from_rectangle():
     #   Follow the same form as the example in a previous problem.
     ####################################################################
     # ------------------------------------------------------------------
+    #Test 1
+    title = 'Test 1 and 2 of DRAW_CIRCLES_FROM_RECTANGLE:'
+    window1 = rg.RoseWindow(720, 500, title)
+
+    rectangle1_point1=rg.Point(400, 250)
+    rectangle1_point2=rg.Point(440, 325)
+    rectangle2_point1=rg.Point(600, 400)
+    rectangle2_point2=rg.Point(500, 450)
+
+
 
 
 def draw_circles_from_rectangle(m, n, rectangle, window):
@@ -159,7 +169,6 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
     Side effects:
       See   draw_circles_from_rectangle.pdf   in this project for pictures
         that may help you better understand the following specification:
-
       First draws the given rg.Rectangle on the given rg.RoseWindow.
       Then draws  m  rg.Circles on the given rg.RoseWindow, such that:
         -- The diameter of each rg.Circle is the same as the height
@@ -181,7 +190,6 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
         -- Each rg.Circle has the same outline_color as the given
              rg.Rectangle (and has no fill_color).
       Must  ** render **     but   ** NOT close **   the window.
-
     Type hints:
       :type m: int
       :type n: int
@@ -202,7 +210,10 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
     #          ** FIRST DO A CONCRETE EXAMPLE BY HAND! **
     ####################################################################
     # ------------------------------------------------------------------
+    rectangle = rg.Rectangle(rectangle1_point1, rectangle1_point2)
+    rectangle.attach_to(window1)
 
+    window.render()
 
 def run_test_draw_lines_from_rectangles():
     """ Tests the   draw_lines_from_rectangles  function. """
